@@ -1,0 +1,49 @@
+.Table {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 3em 0;
+    padding: 0;
+}
+.Table-cell {
+    text-align: center;
+    box-sizing: border-box;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    width: 100%;
+    padding: 0.8em 1.2em;
+    overflow: hidden;
+    list-style: none;
+    border: solid 3px white;
+    background: rgba(112, 128, 144, 0.2);
+}
+
+h3 {
+    margin: 0;
+}
+
+.Table-2cols > .Table-cell {
+    width: 50%;
+}
+
+.Table-header {
+    padding: 0;
+    background: rgba(110, 125, 141, 0.2);
+}
+
+.Button-header {
+    background: #aabace;
+    color: #0e0d0d;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.Button-header:hover,
+.Button-header:focus {
+  background: #a5a7a7;
+}
