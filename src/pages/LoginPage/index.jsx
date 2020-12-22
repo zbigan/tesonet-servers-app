@@ -42,7 +42,7 @@ const LoginPage = () => {
 
 
     return (
-        <div className="Box">
+        <div className="Centered-container Login-form">
             <form action="" onSubmit={(e) => {
                 e.preventDefault();
                 doLogin({ username, password })
@@ -55,7 +55,9 @@ const LoginPage = () => {
                 <br/>
                 <input className="Input-field" name="password" required value={password} onChange={(e) => setPassword(e.target.value)} type="password"/>
                 <br/>
-                <button className="Login-button" type="submit">Log In</button>
+                <div className="Centered-container">
+                    <button className="Login-button" type="submit">Log In</button>
+                </div>
             </form>
             {
                 isError && <div>Wrong username and/or password</div>

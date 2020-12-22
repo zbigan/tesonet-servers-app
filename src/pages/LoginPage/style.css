@@ -1,12 +1,14 @@
-.Box {
+.Centered-container {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.Centered-container > .Login-form {
     height: 60vh;
 }
 
 .Login-button {
-    width: 100%;
     margin: auto;
     margin: 0.5rem 0;
 }
@@ -22,4 +24,6 @@
     width: 100%;
     padding: 1rem 0;
     margin: 0.5rem 0;
+    width: 200px;
+    padding: 0.5rem;
 }
