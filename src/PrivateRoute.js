@@ -7,7 +7,7 @@ function PrivateRoute({ component: Component, ...rest }) {
     const { authToken } = useAuth();
   
     return (
-        <Route {...rest} render={(props) => authToken ? (
+        <Route {...rest} render={(props) => authToken && authToken !== "undefined" ? (
             <Component {...props} />
         ) : (
             <Redirect to="/" />

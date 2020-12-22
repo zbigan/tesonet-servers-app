@@ -6,9 +6,9 @@
 }
 
 .Title {
-    width: 20%;
-    margin: auto;
+    width: 60%;
     align-self: center;
+    display: flex;
 }
 
 .Blank {
@@ -18,4 +18,9 @@
 
 .Header > button {
     margin: 10px;
+}
+
+h2 {
+    margin-left: auto;
+    margin-right: auto;
 }

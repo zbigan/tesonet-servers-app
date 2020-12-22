@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "webpack --mode development"
   },
   "author": "Zbigniev Antonovic",
@@ -15,8 +15,12 @@
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
+    "@testing-library/react": "^11.2.2",
+    "babel-jest": "^26.6.3",
     "babel-loader": "^8.2.2",
     "css-loader": "^1.0.1",
+    "jest": "^26.6.3",
+    "react-test-renderer": "^17.0.1",
     "style-loader": "^0.23.1",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
