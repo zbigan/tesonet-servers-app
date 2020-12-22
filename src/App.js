@@ -4,6 +4,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import "./App.css";
 import LoginPage from "./pages/LoginPage";
 import ServersPage from "./pages/ServersPage";
+import Header from "./components/Header";
 import { AuthContext } from "./context/auth";
 import PrivateRoute from "./PrivateRoute";
 
@@ -22,6 +23,7 @@ const App = (props) => {
         <AuthContext.Provider value={{ authToken, setAuthToken: setToken }}>
             <BrowserRouter>
                 <div className="App">
+                    <Header/>
                     <Route exact path="/" component={LoginPage} />
                     <PrivateRoute path="/servers" component={ServersPage} />
                 </div>

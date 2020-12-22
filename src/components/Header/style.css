@@ -1,0 +1,20 @@
+.Header {
+    display: flex;
+    background-color: #f1f1f1;
+    justify-content: space-between;
+}
+
+.Title {
+    width: 20%;
+    margin: auto;
+    align-self: center;
+}
+
+.Blank {
+    width: 20%;
+    align-self: center;
+}
+
+.Header > button {
+    margin: 10px;
+}

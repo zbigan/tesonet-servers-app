@@ -1,7 +1,10 @@
 html {
   height: 100%;
   background-color: #EEE;
+  background-attachment: fixed;
+  background-image: url("~/images/network.jpg");
 }
+
 body {
   box-sizing: border-box;
   min-height: 100%;
@@ -14,4 +17,27 @@ body {
   border: double 3px #DDD;
   border-top: none;
   border-bottom: none;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  background: #0069ed;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+}
+
+button:active {
+  transform: scale(0.99);
 }

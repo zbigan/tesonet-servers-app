@@ -18,7 +18,7 @@
     background: rgba(112, 128, 144, 0.2);
 }
 
-h3 {
+.Button-header > h3 {
     margin: 0;
 }
 
@@ -38,12 +38,14 @@ h3 {
     top: 0;
     height: 100%;
     width: 100%;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
 }
 
 .Button-header:hover,
 .Button-header:focus {
   background: #a5a7a7;
+}
+
+.Button-header:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
 }

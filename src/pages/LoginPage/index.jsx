@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 import { useAuth } from "../../context/auth";
 import { LOGIN_ENDPOINT } from "../../utils/variables";
+import "./style.css";
 
 
 const LoginPage = () => {
@@ -41,16 +42,20 @@ const LoginPage = () => {
 
 
     return (
-        <div>
+        <div className="Box">
             <form action="" onSubmit={(e) => {
                 e.preventDefault();
                 doLogin({ username, password })
             }}>
-                <label htmlFor="username">Username:</label>
-                <input name="username" required value={username} onChange={(e) => setUsername(e.target.value)} type="text"/>
-                <label htmlFor="password">Password:</label>
-                <input name="password" required value={password} onChange={(e) => setPassword(e.target.value)} type="password"/>
-                <button type="submit">Log In!</button>
+                <label className="Form-label" htmlFor="username">Username:</label>
+                <br/>
+                <input className="Input-field" name="username" required value={username} onChange={(e) => setUsername(e.target.value)} type="text"/>
+                <br/>
+                <label className="Form-label" htmlFor="password">Password:</label>
+                <br/>
+                <input className="Input-field" name="password" required value={password} onChange={(e) => setPassword(e.target.value)} type="password"/>
+                <br/>
+                <button className="Login-button" type="submit">Log In</button>
             </form>
             {
                 isError && <div>Wrong username and/or password</div>

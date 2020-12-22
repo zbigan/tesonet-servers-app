@@ -14,10 +14,9 @@ const initialState = {
 
 
 const ServersPage = () => {
-    const [reload, toggleReload] = useState(false);
     const [state, dispatch] = useReducer(stateReducer, initialState);
     const [isError, setIsError] = useState(false);
-    const { setAuthToken, authToken } = useAuth();
+    const { authToken } = useAuth();
 
     useEffect(() => {
         axios.get(SERVERS_ENDPOINT, {
@@ -33,24 +32,11 @@ const ServersPage = () => {
             }
         })
         .catch(err => setIsError(true));
-    }, [reload]);
-
-
-    function logOut() {
-        setAuthToken();
-    }
+    }, []);
+    
 
     return (
         <>
-            <div className="Table">
-                <div className="Table-cell">
-                    <button onClick={() => toggleReload(!reload)}>Fetch new data</button>
-                    <button onClick={logOut}>Log Out</button>
-                </div>
-            </div>
-            <div className="Table">
-                <h2>Column oriented table</h2>
-            </div>
             <div className="Table Table-2cols">
                 <div style={{order:1}} className="Table-cell Table-header">
                     <button
