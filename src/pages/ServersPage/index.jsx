@@ -59,7 +59,7 @@ const ServersPage = () => {
                         onClick={() => dispatch({ type: 'SORT_BY_DISTANCE' })}
                     >
                         <h3>
-                            {`Distance ${state.sortedBy === 'distance' ? (state.isSortedAscending ? '↑' : '↓') : ''}`}
+                            {`Distance (km) ${state.sortedBy === 'distance' ? (state.isSortedAscending ? '↑' : '↓') : ''}`}
                         </h3>
                     </button>
                 </div>
