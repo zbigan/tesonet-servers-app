@@ -1,29 +1,29 @@
 import React from 'react';
-import {render} from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import Header from './';
 import { useAuth } from "../../context/auth";
 jest.mock("../../context/auth");
 
 
-describe("visibility of log out button in 'Header' component", () => {
-    it("is not visible when token is truthy", () => {
+describe("Visibility of log out button in 'Header' component", () => {
+    it("Is not visible when token is truthy", () => {
         useAuth.mockReturnValue({
             setAuthToken: () => {},
             authToken: 'fake-token'
         });
-        const { getByText } = render(<Header />);
-        const logOutButton = getByText('Log Out');
+        render(<Header />);
+        const logOutButton = screen.getByText('Log Out');
   
         expect(logOutButton).toBeTruthy();
     });
 
-    it("is visible when token is falsy", () => {
+    it("Is visible when token is falsy", () => {
         useAuth.mockReturnValue({
             setAuthToken: () => {},
             authToken: ''
         });
-        const { queryByText } = render(<Header />);
-        const logOutButton = queryByText('Log Out');
+        render(<Header />);
+        const logOutButton = screen.queryByText('Log Out');
   
         expect(logOutButton).toBeNull();
     });
