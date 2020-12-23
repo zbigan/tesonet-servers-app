@@ -1,5 +1,6 @@
 .Centered-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -25,4 +26,8 @@
     margin: 0.5rem 0;
     width: 200px;
     padding: 0.5rem;
+}
+
+.Warning-message {
+    color: red;
 }

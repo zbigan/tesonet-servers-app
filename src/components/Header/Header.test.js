@@ -5,7 +5,7 @@ import { useAuth } from "../../context/auth";
 jest.mock("../../context/auth");
 
 
-describe("visibility of log out button in header", () => {
+describe("visibility of log out button in 'Header' component", () => {
     it("is not visible when token is truthy", () => {
         useAuth.mockReturnValue({
             setAuthToken: () => {},

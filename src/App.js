@@ -18,7 +18,6 @@ const App = (props) => {
         setAuthToken(data);
     }
 
-
     return (
         <AuthContext.Provider value={{ authToken, setAuthToken: setToken }}>
             <BrowserRouter>

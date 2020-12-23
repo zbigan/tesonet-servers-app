@@ -43,24 +43,24 @@ const LoginPage = () => {
 
     return (
         <div className="Centered-container Login-form">
-            <form action="" onSubmit={(e) => {
+            <form aria-label="form" action="" onSubmit={(e) => {
                 e.preventDefault();
                 doLogin({ username, password })
             }}>
                 <label className="Form-label" htmlFor="username">Username:</label>
                 <br/>
-                <input className="Input-field" name="username" required value={username} onChange={(e) => setUsername(e.target.value)} type="text"/>
+                <input required id="username" className="Input-field" name="username" value={username} onChange={(e) => setUsername(e.target.value)} type="text"/>
                 <br/>
                 <label className="Form-label" htmlFor="password">Password:</label>
                 <br/>
-                <input className="Input-field" name="password" required value={password} onChange={(e) => setPassword(e.target.value)} type="password"/>
+                <input required id="password" className="Input-field" name="password" value={password} onChange={(e) => setPassword(e.target.value)} type="password"/>
                 <br/>
                 <div className="Centered-container">
                     <button className="Login-button" type="submit">Log In</button>
                 </div>
             </form>
             {
-                isError && <div>Wrong username and/or password</div>
+                isError && <div className="Warning-message">Wrong username and/or password</div>
             }
         </div>
     )
